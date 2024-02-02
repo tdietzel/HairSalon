@@ -1,4 +1,5 @@
-@model HairSalon.Models.Stylist
+@using HairSalon.Models
+@model List<Stylist>
 
 <!DOCTYPE html>
 <html>
@@ -13,11 +14,19 @@
   </head>
 
   <body>
-    @using ( Html.BeginForm() )
+    @if (Model.Count == 0)
     {
-      @Html.TextBoxFor(model => model.Name)
-      @Html.TextBoxFor(model => model.Description)
-      <input type="submit" value="Submit" />
+      <p>No current Stylists. Add one below!</p>
+      <p>@Html.ActionLink("Add Stylist", "Create")</p>
+    }
+    else
+    {
+      <ul>
+        @foreach(Stylist stylist in Model)
+        {
+          <li>@Html.ActionLink(@stylist.Name, "Details", "Stylist", new { id = @stylist.StylistId})</li>
+        }
+      </ul>
     }
   </body>
 </html>
