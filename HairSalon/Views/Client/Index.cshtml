@@ -1,3 +1,6 @@
+@using HairSalon.Models
+@model List<Client>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,5 +13,18 @@
     <meta charset='utf-8'>
   </head>
   <body>
+    @if (Model.Count == 0)
+    {
+      <p>This employee currently has no clients. Set one up below!</p>
+    }
+    else
+    {
+      <h1>Current Clients</h1>
+      @foreach(Client client in Model)
+      {
+        <p>@client.Name</p>
+      }
+    }
+    @Html.ActionLink("Add a client", "Create")
   </body>
 </html>

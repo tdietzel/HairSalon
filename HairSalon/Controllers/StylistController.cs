@@ -24,18 +24,23 @@ namespace HairSalon.Controllers
     [HttpGet("/Stylist/{id}")]
     public ActionResult Details(int id)
     {
-      Stylist stylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      Stylist stylist = _db.Stylists
+        .Include(stylist => stylist.Clients)
+        .FirstOrDefault(stylist => stylist.StylistId == id);
 
       return View(stylist);
     }
 
+    [HttpGet("/Stylist/Create")]
     public ActionResult Create() { return View(); }
-    [HttpPost]
+    [HttpPost("/Stylist/Create")]
     public ActionResult Create(Stylist stylist)
     {
       _db.Stylists.Add(stylist);
       _db.SaveChanges();
-      return View("Index");
+
+      List<Stylist> model = _db.Stylists.ToList();
+      return View("Index", model);
     }
   }
 }

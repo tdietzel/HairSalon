@@ -17,6 +17,8 @@
     <p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(stylist => stylist.Name)</p>
     <p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(stylist => stylist.Description)</p>
 
+    @Html.ActionLink("Display Clients", "Index", "Client", new { id = Model.StylistId})
+    @Html.ActionLink("Add new Client", "Create", "Client")
     @Html.ActionLink("Go back to Stylists", "Index")
   </body>
 </html>

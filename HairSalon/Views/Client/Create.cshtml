@@ -1,4 +1,4 @@
-@model HairSalon.Models.Stylist
+@model HairSalon.Models.Client
 
 <!DOCTYPE html>
 <html>
@@ -11,14 +11,11 @@
       crossorigin="anonymous">
     <meta charset='utf-8'>
   </head>
-
   <body>
-    @using ( Html.BeginForm() )
+    @using (Html.BeginForm())
     {
-      <h3>Employee Name</h3>
       @Html.TextBoxFor(model => model.Name)
-      <h3>Description</h3>
-      @Html.TextBoxFor(model => model.Description)
+      @Html.DropDownList("StylistId")
       <input type="submit" value="Submit" />
     }
   </body>

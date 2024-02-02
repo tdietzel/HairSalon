@@ -4,7 +4,6 @@ using System.Linq;
 
 using HairSalon.Models;
 
-
 namespace HairSalon.Controllers
 {
   public class HomeController : Controller
