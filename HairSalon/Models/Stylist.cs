@@ -2,6 +2,10 @@ namespace HairSalon.Models
 {
   public class Stylist
   {
-    // C# code goes here
+    public int StylistId { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    
+    public Stylist() {}
   }
 }
