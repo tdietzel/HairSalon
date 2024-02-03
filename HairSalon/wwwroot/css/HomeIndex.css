@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+  background-color: salmon;
+}
+.content-layout {
+  height: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.content-layout a {
+  color: white;
+  font-weight: bold;
+}

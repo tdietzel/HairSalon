@@ -1,0 +1,23 @@
+.content-layout {
+  background-color: salmon;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+#client {
+  color: white;
+}
+.content-layout a {
+  background-color: blueviolet;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  width: 7rem;
+}

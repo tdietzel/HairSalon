@@ -10,13 +10,15 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
     <meta charset='utf-8'>
+    <link rel="stylesheet" type="text/css" href="~/css/ClientCreate.css" />
   </head>
   <body>
     @using (Html.BeginForm())
     {
       @Html.TextBoxFor(model => model.Name)
       @Html.DropDownList("StylistId")
-      <input type="submit" value="Submit" />
+      <input id="submit-btn" type="submit" value="Submit" />
     }
+    @Html.ActionLink("Go Back", "Index", "Stylist")
   </body>
 </html>

@@ -10,15 +10,18 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
     <meta charset='utf-8'>
+    <link rel="stylesheet" type="text/css" href="~/css/StylistDetails.css" />
   </head>
 
   <body>
-    <h1>Details</h1>
-    <p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(stylist => stylist.Name)</p>
-    <p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(stylist => stylist.Description)</p>
+    <div class="content-layout">
+        <h1>Details</h1>
+        <p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(stylist => stylist.Name)</p>
+        <p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(stylist => stylist.Description)</p>
 
-    @Html.ActionLink("Display Clients", "Index", "Client", new { id = Model.StylistId})
-    @Html.ActionLink("Add new Client", "Create", "Client")
-    @Html.ActionLink("Go back to Stylists", "Index")
+        @Html.ActionLink("Display Clients", "Index", "Client", new { id = Model.StylistId})
+        @Html.ActionLink("Add new Client", "Create", "Client")
+        @Html.ActionLink("Go Back", "Index")
+    </div>
   </body>
 </html>

@@ -1,0 +1,29 @@
+body {
+  background-color: salmon;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+body a {
+  background-color: blueviolet;
+  text-decoration: none;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 5rem;
+}
+body a:hover {
+  color: red;
+}
+#submit-btn {
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+  margin-top: 1rem;
+}

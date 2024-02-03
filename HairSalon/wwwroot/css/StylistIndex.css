@@ -1,0 +1,27 @@
+body {
+  text-align: center;
+  background-color: salmon;
+}
+.content-layout {
+  height: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.stylist {
+  margin-bottom: 10px;
+}
+.stylist a {
+  font-weight: bold;
+  color:black;
+  text-decoration-color: white;
+}
+.action-link a{
+  background-color: blueviolet;
+  border: 2px solid black;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}

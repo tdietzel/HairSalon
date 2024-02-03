@@ -10,21 +10,25 @@
       rel="stylesheet" 
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="~/css/ClientIndex.css" />
     <meta charset='utf-8'>
   </head>
   <body>
-    @if (Model.Count == 0)
-    {
-      <p>This employee currently has no clients. Set one up below!</p>
-    }
-    else
-    {
-      <h1>Current Clients</h1>
-      @foreach(Client client in Model)
-      {
-        <p>@client.Name</p>
-      }
-    }
-    @Html.ActionLink("Add a client", "Create")
+    <div class="content-layout">
+        @if (Model.Count == 0)
+        {
+          <p>This employee currently has no clients. Set one up below!</p>
+        }
+        else
+        {
+          <h1>Current Clients</h1>
+          @foreach(Client client in Model)
+          {
+            <p id="client">@client.Name</p>
+          }
+        }
+        @Html.ActionLink("Add a client", "Create")
+        @Html.ActionLink("Back to Stylist", "Index", "Stylist")
+    </div>
   </body>
 </html>
