@@ -84,6 +84,9 @@ This project uses a SQL database to store and manage data. Follow the instructio
    - Build and run the project.
    - Ensure that your application can connect to the database without any errors.
 
+### Database Schema Visualization
+![Database Schema](DatabaseSchema.png)
+
 ## Contributing
 I welcome contributions to improve the project. If you'd like to contribute, please follow these guidelines:
 1. Fork the project repository.
